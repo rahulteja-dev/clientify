@@ -1,0 +1,56 @@
+{
+	"name": "landing-page-template",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint ./src --max-warnings 0",
+		"format": "prettier --check . --ignore-path ../../.gitignore",
+		"typecheck": "tsc --noEmit",
+		"prepare": "husky",
+		"format:check": "prettier --check ./src --ignore-path .prettierignore"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"next": "15.0.2",
+		"react": "19.0.0-rc-02c0e824-20241028",
+		"react-dom": "19.0.0-rc-02c0e824-20241028",
+		"tailwind-merge": "^2.5.4"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@eslint/js": "^9.14.0",
+		"@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+		"@next/eslint-plugin-next": "^15.0.2",
+		"@types/eslint": "^9.6.1",
+		"@types/eslint__js": "^8.42.3",
+		"@types/node": "^20.17.6",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
+		"@typescript-eslint/eslint-plugin": "^8.13.0",
+		"@typescript-eslint/parser": "^8.13.0",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9.14.0",
+		"eslint-config-next": "15.0.2",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-react": "^7.37.2",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"postcss": "^8.4.47",
+		"prettier": "^3.3.3",
+		"tailwindcss": "^3.4.14",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.4.0"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix --max-warnings 0",
+			"prettier --write"
+		]
+	}
+}

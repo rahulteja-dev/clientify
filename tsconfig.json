@@ -1,0 +1,46 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "ES2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"incremental": true,
+		"disableSourceOfProjectReferenceRedirect": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"checkJs": true,
+		"moduleResolution": "Bundler",
+		"noEmit": true,
+		"lib": ["es2022", "dom", "dom.iterable"],
+		"jsx": "preserve",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@/ui/*": ["./src/components/*"],
+			"@/assets/*": ["./src/assets/*"],
+			"@/helpers/*": ["./src/helpers/*"]
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+		"module": "esnext",
+		"noImplicitAny": false, // TODO: Resolve errors when setting this to 'true'
+		"useUnknownInCatchVariables": false // TODO: Resolve errors when setting this to 'true'
+	},
+	"include": [
+		"src",
+		".next/types/**/*.ts",
+		"config/*.js",
+		".prettierrc.cjs",
+		"*.config.js",
+		"*.config.ts"
+	],
+	"exclude": ["node_modules", "build", "dist", ".next", ".expo"]
+}

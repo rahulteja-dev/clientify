@@ -1,0 +1,8 @@
+echo "\n ⏳ Checking ESLint ⏳"
+npx lint-staged
+echo "\n ✅ Finished ESLint ✅" 
+
+echo "\n ⏳ Checking Prettier ⏳"
+pnpm run format:check
+echo "\n ✅ Finished Prettier ✅" 
+

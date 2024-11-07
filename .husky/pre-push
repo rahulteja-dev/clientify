@@ -1,0 +1,13 @@
+echo "\n Checking Branch Name ⏳"
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCH_NAME="production"
+
+if [ "$BRANCH" == $PROTECTED_BRANCH_NAME ]; 
+then
+	echo "\n 🔴 You cannot push to remote $PROTECTED_BRANCH_NAME branch. Please create your own branch and raise PR. ⛔️" && exit 1
+fi
+
+echo "\n ✅ Branch Name Check Passed ✅"
+
+exit 0

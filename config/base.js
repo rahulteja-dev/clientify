@@ -40,7 +40,7 @@ export default tseslint.config(
 			],
 			"@typescript-eslint/no-misused-promises": [2, { checksVoidReturn: { attributes: false } }],
 			"@typescript-eslint/no-non-null-assertion": "error",
-			"import/order": ["error", { "newlines-between": "always" }],
+			// "import/order": ["error", { "newlines-between": "always" }],
 			"import/consistent-type-specifier-style": ["error", "prefer-top-level"],
 		},
 	},

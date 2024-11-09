@@ -1,5 +1,4 @@
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 export const inter = Inter({
 	subsets: ["latin"],
@@ -7,7 +6,8 @@ export const inter = Inter({
 	variable: "--font-inter",
 });
 
-export const fontHeading = localFont({
-	src: "./AmsterdamOne.ttf",
-	variable: "--font-heading",
+export const plusJakartaSans = Plus_Jakarta_Sans({
+	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-plus-jakarta-sans",
 });
